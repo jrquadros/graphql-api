@@ -44,4 +44,3 @@ export const throwError = (condition: boolean, message: string): void => {
 };
 
 export const JWT_SECRET: string = process.env.JWT_SECRET;
-
