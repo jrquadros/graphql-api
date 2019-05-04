@@ -4,6 +4,7 @@ import * as cors from 'cors';
 
 import db from './models'
 import schema from './graphql/schema'
+import { extractJWTMiddleware } from './graphql/middlewares/extract-jwt.middeware';
 
 class App {
     public express: express.Application;
@@ -19,9 +20,10 @@ class App {
         this.express.use(cors());
 
         this.express.use('/graphql',
+
+            extractJWTMiddleware(),
             
             (req, res, next) => {
-                req['context'] = {};
                 req['context'].db = db;
                 next();
             },
