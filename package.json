@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development JWT_SECRET=iron_man node_modules/.bin/nodemon --delay 5 dist/index",
+    "dev": " set JWT_SECRET=iron_man && set NODE_ENV=development && node_modules/.bin/nodemon --delay 5 dist/index",
     "gulp": "node_modules/.bin/gulp"
   },
   "keywords": [],
