@@ -5,6 +5,6 @@ export interface ResolverContext {
 
     db?: DbConnection;
     autorization?: string; //token
-    user?: AuthUser;
+    authUser?: AuthUser;
 
 }
